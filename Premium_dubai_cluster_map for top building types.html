@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_56d0cd75129b7265249c2edb03677635 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+<div style="position: fixed; bottom: 50px; left: 50px; width: 250px; height: 300px; 
+     background-color: white; border:2px solid grey; z-index:9999; font-size:14px;">
+     &nbsp; <b>Property Type Legend</b> <br>
+     &nbsp; <i class="fa fa-hotel" style="color:red"></i> Hotel Apartment<br>
+     &nbsp; <i class="fa fa-building" style="color:blue"></i> Penthouse<br>
+     &nbsp; <i class="fa fa-home" style="color:green"></i> Apartment<br>
+     &nbsp; <i class="fa fa-villa" style="color:purple"></i> Villa<br>
+     &nbsp; <i class="fa fa-house" style="color:orange"></i> Townhouse<br>
+     &nbsp; <i class="fa fa-building" style="color:darkblue"></i> Residential Building<br>
+     &nbsp; <i class="fa fa-th-large" style="color:darkgreen"></i> Residential Floor<br>
+     &nbsp; <i class="fa fa-map" style="color:gray"></i> Residential Plot<br>
+     &nbsp; <i class="fa fa-house-user" style="color:pink"></i> Villa Compound<br>
+</div>
+    
+            <div class="folium-map" id="map_56d0cd75129b7265249c2edb03677635" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_56d0cd75129b7265249c2edb03677635 = L.map(
+                "map_56d0cd75129b7265249c2edb03677635",
+                {
+                    center: [25.276987, 55.296249],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 11,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_bf86738b981792715a1cb8fac5abde80 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_bf86738b981792715a1cb8fac5abde80.addTo(map_56d0cd75129b7265249c2edb03677635);
+        
+    
+        function geo_json_06431435b663e54241d613f061b5147f_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.5, "weight": 2};
+            }
+        }
+
+        function geo_json_06431435b663e54241d613f061b5147f_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_06431435b663e54241d613f061b5147f = L.geoJson(null, {
+                onEachFeature: geo_json_06431435b663e54241d613f061b5147f_onEachFeature,
+            
+                style: geo_json_06431435b663e54241d613f061b5147f_styler,
+        });
+
+        function geo_json_06431435b663e54241d613f061b5147f_add (data) {
+            geo_json_06431435b663e54241d613f061b5147f
+                .addData(data);
+        }
+            geo_json_06431435b663e54241d613f061b5147f_add({"features": [{"geometry": {"coordinates": [[[55.85042263995007, 24.089536600000002], [55.502886399999994, 24.104571300000003], [55.39296773167504, 24.20075245], [55.807998899999994, 24.342739], [55.90713206089887, 24.0931064], [55.85042263995007, 24.089536600000002]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_06431435b663e54241d613f061b5147f.bindTooltip(
+                `<div>
+                     Cluster 0: Penthouse - 49.90 AED/sqft
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            geo_json_06431435b663e54241d613f061b5147f.addTo(map_56d0cd75129b7265249c2edb03677635);
+        
+    
+            var marker_a12e0277e0aec30c1a863642c94a969a = L.marker(
+                [24.191674754740976, 55.679065509536706],
+                {}
+            ).addTo(map_56d0cd75129b7265249c2edb03677635);
+        
+    
+            var icon_e4eee0973d0831587141cb623f07b5dd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-building", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_a12e0277e0aec30c1a863642c94a969a.setIcon(icon_e4eee0973d0831587141cb623f07b5dd);
+        
+    
+            marker_a12e0277e0aec30c1a863642c94a969a.bindTooltip(
+                `<div>
+                     Penthouse (49.90 AED/sqft)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+        function geo_json_8265b1826645a7212d8075414570802f_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.5, "weight": 2};
+            }
+        }
+
+        function geo_json_8265b1826645a7212d8075414570802f_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_8265b1826645a7212d8075414570802f = L.geoJson(null, {
+                onEachFeature: geo_json_8265b1826645a7212d8075414570802f_onEachFeature,
+            
+                style: geo_json_8265b1826645a7212d8075414570802f_styler,
+        });
+
+        function geo_json_8265b1826645a7212d8075414570802f_add (data) {
+            geo_json_8265b1826645a7212d8075414570802f
+                .addData(data);
+        }
+            geo_json_8265b1826645a7212d8075414570802f_add({"features": [{"geometry": {"coordinates": [[[54.50577307662267, 24.405483899999997], [54.4809515, 24.424684], [54.58828682847664, 24.43839295], [54.62348761713739, 24.42748265], [54.52659499999999, 24.406619], [54.50577307662267, 24.405483899999997]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_8265b1826645a7212d8075414570802f.bindTooltip(
+                `<div>
+                     Cluster 1: Penthouse - 70.01 AED/sqft
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            geo_json_8265b1826645a7212d8075414570802f.addTo(map_56d0cd75129b7265249c2edb03677635);
+        
+    
+            var marker_a9ffb6bd362ee164c475c0eb7625e55f = L.marker(
+                [24.42260006231021, 54.54727584966999],
+                {}
+            ).addTo(map_56d0cd75129b7265249c2edb03677635);
+        
+    
+            var icon_f2c45750d2d815b122402ff44e30de15 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-building", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_a9ffb6bd362ee164c475c0eb7625e55f.setIcon(icon_f2c45750d2d815b122402ff44e30de15);
+        
+    
+            marker_a9ffb6bd362ee164c475c0eb7625e55f.bindTooltip(
+                `<div>
+                     Penthouse (70.01 AED/sqft)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+        function geo_json_4eaa754d38e94ee97bd135ab8ec22011_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "red", "fillColor": "red", "fillOpacity": 0.5, "weight": 2};
+            }
+        }
+
+        function geo_json_4eaa754d38e94ee97bd135ab8ec22011_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_4eaa754d38e94ee97bd135ab8ec22011 = L.geoJson(null, {
+                onEachFeature: geo_json_4eaa754d38e94ee97bd135ab8ec22011_onEachFeature,
+            
+                style: geo_json_4eaa754d38e94ee97bd135ab8ec22011_styler,
+        });
+
+        function geo_json_4eaa754d38e94ee97bd135ab8ec22011_add (data) {
+            geo_json_4eaa754d38e94ee97bd135ab8ec22011
+                .addData(data);
+        }
+            geo_json_4eaa754d38e94ee97bd135ab8ec22011_add({"features": [{"geometry": {"coordinates": [[[55.4732537, 24.930673000000002], [55.373964, 24.987364000000003], [55.322788400774094, 25.0651524], [55.3184835, 25.0929388], [55.320968500000006, 25.118865], [55.37532710000001, 25.151424], [55.41491501044415, 25.1575113], [55.4732537, 24.930673000000002]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_4eaa754d38e94ee97bd135ab8ec22011.bindTooltip(
+                `<div>
+                     Cluster 2: Hotel Apartment - 132.15 AED/sqft
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            geo_json_4eaa754d38e94ee97bd135ab8ec22011.addTo(map_56d0cd75129b7265249c2edb03677635);
+        
+    
+            var marker_0f6efc7cb94c1b3f20280a5e6b2b4659 = L.marker(
+                [25.05492735445486, 55.39368599824676],
+                {}
+            ).addTo(map_56d0cd75129b7265249c2edb03677635);
+        
+    
+            var icon_e940566aaeebc9fd877336639f7f008c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-hotel", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_0f6efc7cb94c1b3f20280a5e6b2b4659.setIcon(icon_e940566aaeebc9fd877336639f7f008c);
+        
+    
+            marker_0f6efc7cb94c1b3f20280a5e6b2b4659.bindTooltip(
+                `<div>
+                     Hotel Apartment (132.15 AED/sqft)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+        function geo_json_44c591c7ba93ef270b41c9c5420455df_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "green", "fillColor": "green", "fillOpacity": 0.5, "weight": 2};
+            }
+        }
+
+        function geo_json_44c591c7ba93ef270b41c9c5420455df_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_44c591c7ba93ef270b41c9c5420455df = L.geoJson(null, {
+                onEachFeature: geo_json_44c591c7ba93ef270b41c9c5420455df_onEachFeature,
+            
+                style: geo_json_44c591c7ba93ef270b41c9c5420455df_styler,
+        });
+
+        function geo_json_44c591c7ba93ef270b41c9c5420455df_add (data) {
+            geo_json_44c591c7ba93ef270b41c9c5420455df
+                .addData(data);
+        }
+            geo_json_44c591c7ba93ef270b41c9c5420455df_add({"features": [{"geometry": {"coordinates": [43.351928, 15.175847000000001], "type": "Point"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_44c591c7ba93ef270b41c9c5420455df.bindTooltip(
+                `<div>
+                     Cluster 3: Apartment - 45.62 AED/sqft
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            geo_json_44c591c7ba93ef270b41c9c5420455df.addTo(map_56d0cd75129b7265249c2edb03677635);
+        
+    
+            var marker_5d2898e12f8bde68cfcd270fd35f7834 = L.marker(
+                [15.175847000000001, 43.351928],
+                {}
+            ).addTo(map_56d0cd75129b7265249c2edb03677635);
+        
+    
+            var icon_fd844e1b7caeca361a6de71985cfc9f7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-home", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_5d2898e12f8bde68cfcd270fd35f7834.setIcon(icon_fd844e1b7caeca361a6de71985cfc9f7);
+        
+    
+            marker_5d2898e12f8bde68cfcd270fd35f7834.bindTooltip(
+                `<div>
+                     Apartment (45.62 AED/sqft)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+        function geo_json_c5fc101ac32be3991056edfc869c5a0b_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "pink", "fillColor": "pink", "fillOpacity": 0.5, "weight": 2};
+            }
+        }
+
+        function geo_json_c5fc101ac32be3991056edfc869c5a0b_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_c5fc101ac32be3991056edfc869c5a0b = L.geoJson(null, {
+                onEachFeature: geo_json_c5fc101ac32be3991056edfc869c5a0b_onEachFeature,
+            
+                style: geo_json_c5fc101ac32be3991056edfc869c5a0b_styler,
+        });
+
+        function geo_json_c5fc101ac32be3991056edfc869c5a0b_add (data) {
+            geo_json_c5fc101ac32be3991056edfc869c5a0b
+                .addData(data);
+        }
+            geo_json_c5fc101ac32be3991056edfc869c5a0b_add({"features": [{"geometry": {"coordinates": [[[55.47847779999999, 25.175974], [55.452972850884144, 25.18047865], [55.4224204, 25.221170800000003], [55.420789600000006, 25.26387], [55.430497100000004, 25.334386], [55.45777546352418, 25.33315465], [55.5808289, 25.261233999999998], [55.61278301873906, 25.21852615], [55.5695341, 25.177447], [55.47847779999999, 25.175974]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_c5fc101ac32be3991056edfc869c5a0b.bindTooltip(
+                `<div>
+                     Cluster 4: Villa Compound - 70.00 AED/sqft
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            geo_json_c5fc101ac32be3991056edfc869c5a0b.addTo(map_56d0cd75129b7265249c2edb03677635);
+        
+    
+            var marker_2e3822b121110c2dec845b14e06771f4 = L.marker(
+                [25.243469487748392, 55.50135150093318],
+                {}
+            ).addTo(map_56d0cd75129b7265249c2edb03677635);
+        
+    
+            var icon_c3c6e6e411ee1a5e5f21040b3f27fcbb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-house-user", "iconColor": "white", "markerColor": "pink", "prefix": "fa"}
+            );
+            marker_2e3822b121110c2dec845b14e06771f4.setIcon(icon_c3c6e6e411ee1a5e5f21040b3f27fcbb);
+        
+    
+            marker_2e3822b121110c2dec845b14e06771f4.bindTooltip(
+                `<div>
+                     Villa Compound (70.00 AED/sqft)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+        function geo_json_844453a1d4ea4590c4d9fef2dbf198bf_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "darkblue", "fillOpacity": 0.5, "weight": 2};
+            }
+        }
+
+        function geo_json_844453a1d4ea4590c4d9fef2dbf198bf_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_844453a1d4ea4590c4d9fef2dbf198bf = L.geoJson(null, {
+                onEachFeature: geo_json_844453a1d4ea4590c4d9fef2dbf198bf_onEachFeature,
+            
+                style: geo_json_844453a1d4ea4590c4d9fef2dbf198bf_styler,
+        });
+
+        function geo_json_844453a1d4ea4590c4d9fef2dbf198bf_add (data) {
+            geo_json_844453a1d4ea4590c4d9fef2dbf198bf
+                .addData(data);
+        }
+            geo_json_844453a1d4ea4590c4d9fef2dbf198bf_add({"features": [{"geometry": {"coordinates": [[[55.160833999999994, 25.0053336], [55.10755358863322, 25.025804100000002], [55.11853499506268, 25.10019025], [55.134200899999996, 25.1180879], [55.204668000000005, 25.1319978], [55.1984022, 25.096326], [55.160833999999994, 25.0053336]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_844453a1d4ea4590c4d9fef2dbf198bf.bindTooltip(
+                `<div>
+                     Cluster 5: Residential Building - 354.17 AED/sqft
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            geo_json_844453a1d4ea4590c4d9fef2dbf198bf.addTo(map_56d0cd75129b7265249c2edb03677635);
+        
+    
+            var marker_d55fc13719aefd4de9dcbcf7ec890936 = L.marker(
+                [25.072082944389127, 55.153332656165524],
+                {}
+            ).addTo(map_56d0cd75129b7265249c2edb03677635);
+        
+    
+            var icon_1a6711fa23ecdac196209d0197c3403b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-building", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_d55fc13719aefd4de9dcbcf7ec890936.setIcon(icon_1a6711fa23ecdac196209d0197c3403b);
+        
+    
+            marker_d55fc13719aefd4de9dcbcf7ec890936.bindTooltip(
+                `<div>
+                     Residential Building (354.17 AED/sqft)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+        function geo_json_dd97e65d636299d76c99910d0a105f59_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "red", "fillColor": "red", "fillOpacity": 0.5, "weight": 2};
+            }
+        }
+
+        function geo_json_dd97e65d636299d76c99910d0a105f59_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_dd97e65d636299d76c99910d0a105f59 = L.geoJson(null, {
+                onEachFeature: geo_json_dd97e65d636299d76c99910d0a105f59_onEachFeature,
+            
+                style: geo_json_dd97e65d636299d76c99910d0a105f59_styler,
+        });
+
+        function geo_json_dd97e65d636299d76c99910d0a105f59_add (data) {
+            geo_json_dd97e65d636299d76c99910d0a105f59
+                .addData(data);
+        }
+            geo_json_dd97e65d636299d76c99910d0a105f59_add({"features": [{"geometry": {"coordinates": [[[54.447876, 24.4177935], [54.397054407071415, 24.4206174], [54.31019066780701, 24.46213075], [54.319951, 24.479853], [54.44368803118431, 24.54597235], [54.48615649709043, 24.53170985], [54.46287679999999, 24.4200646], [54.447876, 24.4177935]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_dd97e65d636299d76c99910d0a105f59.bindTooltip(
+                `<div>
+                     Cluster 6: Hotel Apartment - 130.80 AED/sqft
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            geo_json_dd97e65d636299d76c99910d0a105f59.addTo(map_56d0cd75129b7265249c2edb03677635);
+        
+    
+            var marker_62861e7863c4e71d9fcd6dc3a8add0f8 = L.marker(
+                [24.477039169196086, 54.41228931996988],
+                {}
+            ).addTo(map_56d0cd75129b7265249c2edb03677635);
+        
+    
+            var icon_9e451c793600f300b5790f153c28e8bd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-hotel", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_62861e7863c4e71d9fcd6dc3a8add0f8.setIcon(icon_9e451c793600f300b5790f153c28e8bd);
+        
+    
+            marker_62861e7863c4e71d9fcd6dc3a8add0f8.bindTooltip(
+                `<div>
+                     Hotel Apartment (130.80 AED/sqft)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+        function geo_json_1aa6b7b818776c8fb2362d77698a21df_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "darkblue", "fillOpacity": 0.5, "weight": 2};
+            }
+        }
+
+        function geo_json_1aa6b7b818776c8fb2362d77698a21df_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_1aa6b7b818776c8fb2362d77698a21df = L.geoJson(null, {
+                onEachFeature: geo_json_1aa6b7b818776c8fb2362d77698a21df_onEachFeature,
+            
+                style: geo_json_1aa6b7b818776c8fb2362d77698a21df_styler,
+        });
+
+        function geo_json_1aa6b7b818776c8fb2362d77698a21df_add (data) {
+            geo_json_1aa6b7b818776c8fb2362d77698a21df
+                .addData(data);
+        }
+            geo_json_1aa6b7b818776c8fb2362d77698a21df_add({"features": [{"geometry": {"coordinates": [[[55.7320488, 25.2660333], [55.582916000000004, 25.286123999999997], [55.522815, 25.41266], [55.5448634, 25.544071399999996], [55.55675720000001, 25.582139], [55.5754566, 25.5909105], [55.87809549999999, 25.2806866], [55.7320488, 25.2660333]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_1aa6b7b818776c8fb2362d77698a21df.bindTooltip(
+                `<div>
+                     Cluster 7: Residential Building - 100.08 AED/sqft
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            geo_json_1aa6b7b818776c8fb2362d77698a21df.addTo(map_56d0cd75129b7265249c2edb03677635);
+        
+    
+            var marker_25a8b4bbd956baa0f6f31bf1fb22e370 = L.marker(
+                [25.392039807761666, 55.659387101902034],
+                {}
+            ).addTo(map_56d0cd75129b7265249c2edb03677635);
+        
+    
+            var icon_6783d6f04761bcca37b8b7f2f2cab1c3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-building", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_25a8b4bbd956baa0f6f31bf1fb22e370.setIcon(icon_6783d6f04761bcca37b8b7f2f2cab1c3);
+        
+    
+            marker_25a8b4bbd956baa0f6f31bf1fb22e370.bindTooltip(
+                `<div>
+                     Residential Building (100.08 AED/sqft)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+        function geo_json_ab89337d6055ee5f2af393248885dcd1_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "red", "fillColor": "red", "fillOpacity": 0.5, "weight": 2};
+            }
+        }
+
+        function geo_json_ab89337d6055ee5f2af393248885dcd1_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_ab89337d6055ee5f2af393248885dcd1 = L.geoJson(null, {
+                onEachFeature: geo_json_ab89337d6055ee5f2af393248885dcd1_onEachFeature,
+            
+                style: geo_json_ab89337d6055ee5f2af393248885dcd1_styler,
+        });
+
+        function geo_json_ab89337d6055ee5f2af393248885dcd1_add (data) {
+            geo_json_ab89337d6055ee5f2af393248885dcd1
+                .addData(data);
+        }
+            geo_json_ab89337d6055ee5f2af393248885dcd1_add({"features": [{"geometry": {"coordinates": [[[56.0768012, 25.553532], [55.743255500000004, 25.681060100000003], [56.051674620879744, 25.9203098], [56.2842464, 25.5977225], [56.0768012, 25.553532]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_ab89337d6055ee5f2af393248885dcd1.bindTooltip(
+                `<div>
+                     Cluster 8: Hotel Apartment - 69.55 AED/sqft
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            geo_json_ab89337d6055ee5f2af393248885dcd1.addTo(map_56d0cd75129b7265249c2edb03677635);
+        
+    
+            var marker_b258420db2f4d9d1ca09028f40f280bd = L.marker(
+                [25.70737786530784, 56.02814956050552],
+                {}
+            ).addTo(map_56d0cd75129b7265249c2edb03677635);
+        
+    
+            var icon_60752e5e243572e2b82ad3557fa55c5e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-hotel", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_b258420db2f4d9d1ca09028f40f280bd.setIcon(icon_60752e5e243572e2b82ad3557fa55c5e);
+        
+    
+            marker_b258420db2f4d9d1ca09028f40f280bd.bindTooltip(
+                `<div>
+                     Hotel Apartment (69.55 AED/sqft)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+        function geo_json_3106e43b93ab9532bee64c0fb645ef77_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "green", "fillColor": "green", "fillOpacity": 0.5, "weight": 2};
+            }
+        }
+
+        function geo_json_3106e43b93ab9532bee64c0fb645ef77_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_3106e43b93ab9532bee64c0fb645ef77 = L.geoJson(null, {
+                onEachFeature: geo_json_3106e43b93ab9532bee64c0fb645ef77_onEachFeature,
+            
+                style: geo_json_3106e43b93ab9532bee64c0fb645ef77_styler,
+        });
+
+        function geo_json_3106e43b93ab9532bee64c0fb645ef77_add (data) {
+            geo_json_3106e43b93ab9532bee64c0fb645ef77
+                .addData(data);
+        }
+            geo_json_3106e43b93ab9532bee64c0fb645ef77_add({"features": [{"geometry": {"coordinates": [[[53.7019687, 23.6515354], [52.921301166932494, 24.01241265], [51.4555917, 25.2342586], [53.70466170179361, 23.6520354], [53.7019687, 23.6515354]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_3106e43b93ab9532bee64c0fb645ef77.bindTooltip(
+                `<div>
+                     Cluster 9: Apartment - 57.40 AED/sqft
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            geo_json_3106e43b93ab9532bee64c0fb645ef77.addTo(map_56d0cd75129b7265249c2edb03677635);
+        
+    
+            var marker_3e5d10ec5ca3ca1ced13f56b917e85ee = L.marker(
+                [24.297898769250978, 52.69622193477984],
+                {}
+            ).addTo(map_56d0cd75129b7265249c2edb03677635);
+        
+    
+            var icon_5fc51e2740cdfc34d4df6e7af070410c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-home", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_3e5d10ec5ca3ca1ced13f56b917e85ee.setIcon(icon_5fc51e2740cdfc34d4df6e7af070410c);
+        
+    
+            marker_3e5d10ec5ca3ca1ced13f56b917e85ee.bindTooltip(
+                `<div>
+                     Apartment (57.40 AED/sqft)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+        function geo_json_a7896febb1a3208fe2d9f4a685f4cc2b_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "purple", "fillColor": "purple", "fillOpacity": 0.5, "weight": 2};
+            }
+        }
+
+        function geo_json_a7896febb1a3208fe2d9f4a685f4cc2b_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_a7896febb1a3208fe2d9f4a685f4cc2b = L.geoJson(null, {
+                onEachFeature: geo_json_a7896febb1a3208fe2d9f4a685f4cc2b_onEachFeature,
+            
+                style: geo_json_a7896febb1a3208fe2d9f4a685f4cc2b_styler,
+        });
+
+        function geo_json_a7896febb1a3208fe2d9f4a685f4cc2b_add (data) {
+            geo_json_a7896febb1a3208fe2d9f4a685f4cc2b
+                .addData(data);
+        }
+            geo_json_a7896febb1a3208fe2d9f4a685f4cc2b_add({"features": [{"geometry": {"coordinates": [[[56.092993271151606, 24.81023295], [56.36129352186721, 25.47693525], [56.360549600000006, 25.2760561], [56.3542189, 25.051295899999996], [56.3529171, 25.044378899999998], [56.350018500000004, 25.03129], [56.092993271151606, 24.81023295]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_a7896febb1a3208fe2d9f4a685f4cc2b.bindTooltip(
+                `<div>
+                     Cluster 10: Villa - 30.83 AED/sqft
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            geo_json_a7896febb1a3208fe2d9f4a685f4cc2b.addTo(map_56d0cd75129b7265249c2edb03677635);
+        
+    
+            var marker_c9510a8d265c9c865e945714ace455b5 = L.marker(
+                [25.108861389717088, 56.27022416880234],
+                {}
+            ).addTo(map_56d0cd75129b7265249c2edb03677635);
+        
+    
+            var icon_d4a037a7c18a9f767df704a7f301545c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-villa", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_c9510a8d265c9c865e945714ace455b5.setIcon(icon_d4a037a7c18a9f767df704a7f301545c);
+        
+    
+            marker_c9510a8d265c9c865e945714ace455b5.bindTooltip(
+                `<div>
+                     Villa (30.83 AED/sqft)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+        function geo_json_17e0be71d655a5560922c3ab4deb11c3_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "red", "fillColor": "red", "fillOpacity": 0.5, "weight": 2};
+            }
+        }
+
+        function geo_json_17e0be71d655a5560922c3ab4deb11c3_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_17e0be71d655a5560922c3ab4deb11c3 = L.geoJson(null, {
+                onEachFeature: geo_json_17e0be71d655a5560922c3ab4deb11c3_onEachFeature,
+            
+                style: geo_json_17e0be71d655a5560922c3ab4deb11c3_styler,
+        });
+
+        function geo_json_17e0be71d655a5560922c3ab4deb11c3_add (data) {
+            geo_json_17e0be71d655a5560922c3ab4deb11c3
+                .addData(data);
+        }
+            geo_json_17e0be71d655a5560922c3ab4deb11c3_add({"features": [{"geometry": {"coordinates": [[[55.34362779999999, 25.1597355], [55.3257751, 25.176514800000003], [55.2756623, 25.2548579], [55.305333999999995, 25.2727936], [55.377709700000004, 25.2364297], [55.43736387153433, 25.1871198], [55.34362779999999, 25.1597355]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_17e0be71d655a5560922c3ab4deb11c3.bindTooltip(
+                `<div>
+                     Cluster 11: Hotel Apartment - 187.64 AED/sqft
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            geo_json_17e0be71d655a5560922c3ab4deb11c3.addTo(map_56d0cd75129b7265249c2edb03677635);
+        
+    
+            var marker_18b841b3a526e35670b153e5c10b0a1d = L.marker(
+                [25.21344826195238, 55.34917575939994],
+                {}
+            ).addTo(map_56d0cd75129b7265249c2edb03677635);
+        
+    
+            var icon_f58530036fd8b7a4324e9a205981d32f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-hotel", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_18b841b3a526e35670b153e5c10b0a1d.setIcon(icon_f58530036fd8b7a4324e9a205981d32f);
+        
+    
+            marker_18b841b3a526e35670b153e5c10b0a1d.bindTooltip(
+                `<div>
+                     Hotel Apartment (187.64 AED/sqft)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+        function geo_json_c8b586f9a43cdf19df4af1733963ca26_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "red", "fillColor": "red", "fillOpacity": 0.5, "weight": 2};
+            }
+        }
+
+        function geo_json_c8b586f9a43cdf19df4af1733963ca26_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_c8b586f9a43cdf19df4af1733963ca26 = L.geoJson(null, {
+                onEachFeature: geo_json_c8b586f9a43cdf19df4af1733963ca26_onEachFeature,
+            
+                style: geo_json_c8b586f9a43cdf19df4af1733963ca26_styler,
+        });
+
+        function geo_json_c8b586f9a43cdf19df4af1733963ca26_add (data) {
+            geo_json_c8b586f9a43cdf19df4af1733963ca26
+                .addData(data);
+        }
+            geo_json_c8b586f9a43cdf19df4af1733963ca26_add({"features": [{"geometry": {"coordinates": [[[55.24885632771925, 25.001354199999998], [55.20083862592119, 25.0203281], [55.189622299999996, 25.0249925], [55.188366, 25.045403], [55.23578070000001, 25.117721300000003], [55.2981217, 25.0850789], [55.288876297663144, 25.01085145], [55.24885632771925, 25.001354199999998]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_c8b586f9a43cdf19df4af1733963ca26.bindTooltip(
+                `<div>
+                     Cluster 12: Hotel Apartment - 133.60 AED/sqft
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            geo_json_c8b586f9a43cdf19df4af1733963ca26.addTo(map_56d0cd75129b7265249c2edb03677635);
+        
+    
+            var marker_352cf64edc8c15dcffb38520121d705a = L.marker(
+                [25.054183413510092, 55.24667991527178],
+                {}
+            ).addTo(map_56d0cd75129b7265249c2edb03677635);
+        
+    
+            var icon_4cc41e6fa1ad0d0e2b0a25eaf1308781 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-hotel", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_352cf64edc8c15dcffb38520121d705a.setIcon(icon_4cc41e6fa1ad0d0e2b0a25eaf1308781);
+        
+    
+            marker_352cf64edc8c15dcffb38520121d705a.bindTooltip(
+                `<div>
+                     Hotel Apartment (133.60 AED/sqft)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+        function geo_json_0bc8961b7bcbb16dafcbae736be7135a_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "orange", "fillColor": "orange", "fillOpacity": 0.5, "weight": 2};
+            }
+        }
+
+        function geo_json_0bc8961b7bcbb16dafcbae736be7135a_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_0bc8961b7bcbb16dafcbae736be7135a = L.geoJson(null, {
+                onEachFeature: geo_json_0bc8961b7bcbb16dafcbae736be7135a_onEachFeature,
+            
+                style: geo_json_0bc8961b7bcbb16dafcbae736be7135a_styler,
+        });
+
+        function geo_json_0bc8961b7bcbb16dafcbae736be7135a_add (data) {
+            geo_json_0bc8961b7bcbb16dafcbae736be7135a
+                .addData(data);
+        }
+            geo_json_0bc8961b7bcbb16dafcbae736be7135a_add({"features": [{"geometry": {"coordinates": [[[54.65689142777212, 24.4664366], [54.600939329963616, 24.48593095], [54.600629392850315, 24.4889401], [54.736093330301905, 24.688257500000002], [54.7531126, 24.677437899999997], [54.80123664657025, 24.6270514], [54.65689142777212, 24.4664366]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_0bc8961b7bcbb16dafcbae736be7135a.bindTooltip(
+                `<div>
+                     Cluster 13: Townhouse - 96.40 AED/sqft
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            geo_json_0bc8961b7bcbb16dafcbae736be7135a.addTo(map_56d0cd75129b7265249c2edb03677635);
+        
+    
+            var marker_d331689e0362f2379b275ea54b432073 = L.marker(
+                [24.57479185291442, 54.70318942446281],
+                {}
+            ).addTo(map_56d0cd75129b7265249c2edb03677635);
+        
+    
+            var icon_5b64de94600b930be6a09731089d5529 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-house", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_d331689e0362f2379b275ea54b432073.setIcon(icon_5b64de94600b930be6a09731089d5529);
+        
+    
+            marker_d331689e0362f2379b275ea54b432073.bindTooltip(
+                `<div>
+                     Townhouse (96.40 AED/sqft)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+        function geo_json_46135665a0f64034d90e9d1bb67d3978_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "darkblue", "fillOpacity": 0.5, "weight": 2};
+            }
+        }
+
+        function geo_json_46135665a0f64034d90e9d1bb67d3978_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_46135665a0f64034d90e9d1bb67d3978 = L.geoJson(null, {
+                onEachFeature: geo_json_46135665a0f64034d90e9d1bb67d3978_onEachFeature,
+            
+                style: geo_json_46135665a0f64034d90e9d1bb67d3978_styler,
+        });
+
+        function geo_json_46135665a0f64034d90e9d1bb67d3978_add (data) {
+            geo_json_46135665a0f64034d90e9d1bb67d3978
+                .addData(data);
+        }
+            geo_json_46135665a0f64034d90e9d1bb67d3978_add({"features": [{"geometry": {"coordinates": [[[55.0662934, 24.839900600000004], [55.02758961604496, 24.84326945], [54.99844895690338, 24.94481735], [55.09107420000001, 24.977598699999998], [55.175013, 24.985928], [55.161512800000004, 24.9144391], [55.0662934, 24.839900600000004]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_46135665a0f64034d90e9d1bb67d3978.bindTooltip(
+                `<div>
+                     Cluster 14: Residential Building - 292.43 AED/sqft
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            geo_json_46135665a0f64034d90e9d1bb67d3978.addTo(map_56d0cd75129b7265249c2edb03677635);
+        
+    
+            var marker_c8340cd8fb9016a82d31621e6fc02343 = L.marker(
+                [24.918990606293903, 55.08427188933078],
+                {}
+            ).addTo(map_56d0cd75129b7265249c2edb03677635);
+        
+    
+            var icon_cb1261a93f26e8a0c84a12a16692277f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-building", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_c8340cd8fb9016a82d31621e6fc02343.setIcon(icon_cb1261a93f26e8a0c84a12a16692277f);
+        
+    
+            marker_c8340cd8fb9016a82d31621e6fc02343.bindTooltip(
+                `<div>
+                     Residential Building (292.43 AED/sqft)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+        function geo_json_942ad1e5c6c462d2ccf326e0527ef1f2_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "darkblue", "fillOpacity": 0.5, "weight": 2};
+            }
+        }
+
+        function geo_json_942ad1e5c6c462d2ccf326e0527ef1f2_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_942ad1e5c6c462d2ccf326e0527ef1f2 = L.geoJson(null, {
+                onEachFeature: geo_json_942ad1e5c6c462d2ccf326e0527ef1f2_onEachFeature,
+            
+                style: geo_json_942ad1e5c6c462d2ccf326e0527ef1f2_styler,
+        });
+
+        function geo_json_942ad1e5c6c462d2ccf326e0527ef1f2_add (data) {
+            geo_json_942ad1e5c6c462d2ccf326e0527ef1f2
+                .addData(data);
+        }
+            geo_json_942ad1e5c6c462d2ccf326e0527ef1f2_add({"features": [{"geometry": {"coordinates": [[[54.5535564, 24.3339589], [54.487938899999996, 24.373808], [54.59059179361312, 24.36917605], [54.5535564, 24.3339589]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_942ad1e5c6c462d2ccf326e0527ef1f2.bindTooltip(
+                `<div>
+                     Cluster 15: Residential Building - 154.23 AED/sqft
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            geo_json_942ad1e5c6c462d2ccf326e0527ef1f2.addTo(map_56d0cd75129b7265249c2edb03677635);
+        
+    
+            var marker_735563658463832f99b936d433bff738 = L.marker(
+                [24.358980983333332, 54.54402903120437],
+                {}
+            ).addTo(map_56d0cd75129b7265249c2edb03677635);
+        
+    
+            var icon_e25f1cdcb713fe5c1be8991b7c5cc6f6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-building", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_735563658463832f99b936d433bff738.setIcon(icon_e25f1cdcb713fe5c1be8991b7c5cc6f6);
+        
+    
+            marker_735563658463832f99b936d433bff738.bindTooltip(
+                `<div>
+                     Residential Building (154.23 AED/sqft)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+        function geo_json_6607ed511a91ab71aeaf3ddd5cc214d7_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "pink", "fillColor": "pink", "fillOpacity": 0.5, "weight": 2};
+            }
+        }
+
+        function geo_json_6607ed511a91ab71aeaf3ddd5cc214d7_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_6607ed511a91ab71aeaf3ddd5cc214d7 = L.geoJson(null, {
+                onEachFeature: geo_json_6607ed511a91ab71aeaf3ddd5cc214d7_onEachFeature,
+            
+                style: geo_json_6607ed511a91ab71aeaf3ddd5cc214d7_styler,
+        });
+
+        function geo_json_6607ed511a91ab71aeaf3ddd5cc214d7_add (data) {
+            geo_json_6607ed511a91ab71aeaf3ddd5cc214d7
+                .addData(data);
+        }
+            geo_json_6607ed511a91ab71aeaf3ddd5cc214d7_add({"features": [{"geometry": {"coordinates": [[[54.703660899999996, 24.2219216], [54.632334354590036, 24.3594999], [54.731108580882314, 24.4382768], [54.749892, 24.353232000000002], [54.703660899999996, 24.2219216]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_6607ed511a91ab71aeaf3ddd5cc214d7.bindTooltip(
+                `<div>
+                     Cluster 16: Villa Compound - 46.10 AED/sqft
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            geo_json_6607ed511a91ab71aeaf3ddd5cc214d7.addTo(map_56d0cd75129b7265249c2edb03677635);
+        
+    
+            var marker_31df16eed8795c9476766a05654ecfc8 = L.marker(
+                [24.339377384842642, 54.69882589620256],
+                {}
+            ).addTo(map_56d0cd75129b7265249c2edb03677635);
+        
+    
+            var icon_06140100396f09b4da6e89c187d3ab4d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-house-user", "iconColor": "white", "markerColor": "pink", "prefix": "fa"}
+            );
+            marker_31df16eed8795c9476766a05654ecfc8.setIcon(icon_06140100396f09b4da6e89c187d3ab4d);
+        
+    
+            marker_31df16eed8795c9476766a05654ecfc8.bindTooltip(
+                `<div>
+                     Villa Compound (46.10 AED/sqft)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+        function geo_json_d8a7f3feaae3abd64b8db030502c076a_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "darkblue", "fillOpacity": 0.5, "weight": 2};
+            }
+        }
+
+        function geo_json_d8a7f3feaae3abd64b8db030502c076a_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_d8a7f3feaae3abd64b8db030502c076a = L.geoJson(null, {
+                onEachFeature: geo_json_d8a7f3feaae3abd64b8db030502c076a_onEachFeature,
+            
+                style: geo_json_d8a7f3feaae3abd64b8db030502c076a_styler,
+        });
+
+        function geo_json_d8a7f3feaae3abd64b8db030502c076a_add (data) {
+            geo_json_d8a7f3feaae3abd64b8db030502c076a
+                .addData(data);
+        }
+            geo_json_d8a7f3feaae3abd64b8db030502c076a_add({"features": [{"geometry": {"coordinates": [[[55.46200915287459, 25.35635885], [55.43522315494829, 25.35807565], [55.427003591766784, 25.36335235], [55.406000087437675, 25.383247100000002], [55.4404449, 25.4163383], [55.4530187, 25.4184323], [55.5006527, 25.4249789], [55.50707866349629, 25.40378665], [55.508071900000004, 25.373434399999997], [55.46200915287459, 25.35635885]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_d8a7f3feaae3abd64b8db030502c076a.bindTooltip(
+                `<div>
+                     Cluster 17: Residential Building - 132.00 AED/sqft
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            geo_json_d8a7f3feaae3abd64b8db030502c076a.addTo(map_56d0cd75129b7265249c2edb03677635);
+        
+    
+            var marker_0e6ac3941587e72aa8e65e8da145e64c = L.marker(
+                [25.38954893489828, 55.46287816614483],
+                {}
+            ).addTo(map_56d0cd75129b7265249c2edb03677635);
+        
+    
+            var icon_6ac94aa441ae6a21f1393f9b8985cbcf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-building", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_0e6ac3941587e72aa8e65e8da145e64c.setIcon(icon_6ac94aa441ae6a21f1393f9b8985cbcf);
+        
+    
+            marker_0e6ac3941587e72aa8e65e8da145e64c.bindTooltip(
+                `<div>
+                     Residential Building (132.00 AED/sqft)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+        function geo_json_d7d5136cd632da5f42d9f78edc475cac_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "darkblue", "fillColor": "darkblue", "fillOpacity": 0.5, "weight": 2};
+            }
+        }
+
+        function geo_json_d7d5136cd632da5f42d9f78edc475cac_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_d7d5136cd632da5f42d9f78edc475cac = L.geoJson(null, {
+                onEachFeature: geo_json_d7d5136cd632da5f42d9f78edc475cac_onEachFeature,
+            
+                style: geo_json_d7d5136cd632da5f42d9f78edc475cac_styler,
+        });
+
+        function geo_json_d7d5136cd632da5f42d9f78edc475cac_add (data) {
+            geo_json_d7d5136cd632da5f42d9f78edc475cac
+                .addData(data);
+        }
+            geo_json_d7d5136cd632da5f42d9f78edc475cac_add({"features": [{"geometry": {"coordinates": [[[55.266891599999994, 25.119049800000003], [55.2637966, 25.119136100000002], [55.2144527, 25.1448185], [55.207500399999994, 25.1539087], [55.265370425875595, 25.262151], [55.279212, 25.242832800000002], [55.307912984149645, 25.177246], [55.2704949, 25.1211822], [55.266891599999994, 25.119049800000003]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_d7d5136cd632da5f42d9f78edc475cac.bindTooltip(
+                `<div>
+                     Cluster 18: Residential Building - 240.00 AED/sqft
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            geo_json_d7d5136cd632da5f42d9f78edc475cac.addTo(map_56d0cd75129b7265249c2edb03677635);
+        
+    
+            var marker_7bfa6c10c44ba20d77555cd0c567bdcb = L.marker(
+                [25.181217780152675, 55.260493429599975],
+                {}
+            ).addTo(map_56d0cd75129b7265249c2edb03677635);
+        
+    
+            var icon_5ce3969c96adf6f7706d5c5e3002425b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-building", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_7bfa6c10c44ba20d77555cd0c567bdcb.setIcon(icon_5ce3969c96adf6f7706d5c5e3002425b);
+        
+    
+            marker_7bfa6c10c44ba20d77555cd0c567bdcb.bindTooltip(
+                `<div>
+                     Residential Building (240.00 AED/sqft)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+        function geo_json_dd03d72ff7ceb87fdbf37fa3e27786f5_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "orange", "fillColor": "orange", "fillOpacity": 0.5, "weight": 2};
+            }
+        }
+
+        function geo_json_dd03d72ff7ceb87fdbf37fa3e27786f5_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_dd03d72ff7ceb87fdbf37fa3e27786f5 = L.geoJson(null, {
+                onEachFeature: geo_json_dd03d72ff7ceb87fdbf37fa3e27786f5_onEachFeature,
+            
+                style: geo_json_dd03d72ff7ceb87fdbf37fa3e27786f5_styler,
+        });
+
+        function geo_json_dd03d72ff7ceb87fdbf37fa3e27786f5_add (data) {
+            geo_json_dd03d72ff7ceb87fdbf37fa3e27786f5
+                .addData(data);
+        }
+            geo_json_dd03d72ff7ceb87fdbf37fa3e27786f5_add({"features": [{"geometry": {"coordinates": [[[55.3795909, 25.262628], [55.359633200000005, 25.3005332], [55.359394747540904, 25.3223781], [55.383624, 25.356072], [55.392258, 25.366823], [55.401896435721376, 25.371034100000006], [55.41875396174422, 25.3579516], [55.42826141027223, 25.34788185], [55.423100899999994, 25.3337477], [55.387487300000004, 25.269769], [55.3795909, 25.262628]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_dd03d72ff7ceb87fdbf37fa3e27786f5.bindTooltip(
+                `<div>
+                     Cluster 19: Townhouse - 75.00 AED/sqft
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            geo_json_dd03d72ff7ceb87fdbf37fa3e27786f5.addTo(map_56d0cd75129b7265249c2edb03677635);
+        
+    
+            var marker_d664129b1f5064dcf236028060258696 = L.marker(
+                [25.321484952897215, 55.390774742881064],
+                {}
+            ).addTo(map_56d0cd75129b7265249c2edb03677635);
+        
+    
+            var icon_b9ee284b9879dc6f057b68878ee807a6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-house", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_d664129b1f5064dcf236028060258696.setIcon(icon_b9ee284b9879dc6f057b68878ee807a6);
+        
+    
+            marker_d664129b1f5064dcf236028060258696.bindTooltip(
+                `<div>
+                     Townhouse (75.00 AED/sqft)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
